@@ -1,0 +1,40 @@
+2017-10-02 00:03:08 cat: Connect, proto: mysql-5, msg: CONNECT TO "RECEITA" AS USER "root"
+2017-10-02 00:03:08 cat: Connect, proto: mysql-5, msg: CONNECT TO "teste" AS USER "root"
+2017-10-02 00:03:08 cat: Execute, proto: mysql-5, msg: Consulta 2 : 
+SELECT
+  *
+FROM
+  RCTA
+
+
+2017-10-02 00:03:08 cat: Execute, proto: mysql-5, msg: SELECT
+  *
+FROM
+  RCTA
+, errcode: 1146, error: Table 'teste.rcta' doesn't exist
+2017-10-02 00:03:28 cat: Disconnect, proto: mysql-5, msg: DISCONNECT FROM "RECEITA"
+2017-10-02 00:14:37 cat: Connect, proto: mysql-5, msg: CONNECT TO "RECEITA" AS USER "root"
+2017-10-02 00:14:37 cat: Connect, proto: mysql-5, msg: CONNECT TO "Receita" AS USER "root"
+2017-10-02 00:14:37 cat: Execute, proto: mysql-5, msg: Consulta 2 : 
+SELECT
+  *
+FROM
+  RCTA
+
+
+2017-10-02 00:14:37 cat: Execute, proto: mysql-5, msg: Consulta 3 : 
+SHOW TABLES FROM Receita LIKE 'RCTA'
+
+2017-10-02 00:14:37 cat: Execute, proto: mysql-5, msg: Consulta 4 : 
+SHOW FULL COLUMNS FROM Receita.rcta LIKE '%'
+
+2017-10-02 00:14:54 cat: Disconnect, proto: mysql-5, msg: DISCONNECT FROM "RECEITA"
+2017-10-02 00:14:57 cat: Connect, proto: mysql-5, msg: CONNECT TO "RECEITA" AS USER "root"
+2017-10-02 00:14:57 cat: Execute, proto: mysql-5, msg: Consulta 6 : 
+SELECT
+  *
+FROM
+  RCTA
+
+
+2017-10-02 00:16:56 cat: Disconnect, proto: mysql-5, msg: DISCONNECT FROM "RECEITA"
