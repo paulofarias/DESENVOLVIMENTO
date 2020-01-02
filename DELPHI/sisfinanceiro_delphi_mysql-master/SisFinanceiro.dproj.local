@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/07/28 23:41:13.000.155,C:\Users\thiagopc\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\thiagopc\Documents\GitHub\sisfinanceiro_delphi_mysql\ufrmPrincipal.dfm</Transaction>
+    <Transaction>2013/07/28 23:41:25.000.051,C:\Users\thiagopc\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\thiagopc\Documents\GitHub\sisfinanceiro_delphi_mysql\SisFinanceiro.dproj</Transaction>
+    <Transaction>2013/07/28 23:46:51.000.419,C:\Users\thiagopc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm=C:\Users\thiagopc\Documents\GitHub\sisfinanceiro_delphi_mysql\datamodule\uDmDados.dfm</Transaction>
+    <Transaction>2013/09/06 21:36:25.000.668,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroBasico.dfm=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2013/09/06 21:36:25.000.668,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroBasico.pas=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2013/10/19 21:24:06.000.256,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroUsuarios.pas=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2013/10/19 21:24:06.000.256,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroUsuarios.dfm=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2013/10/19 21:27:13.000.087,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\classes\uFuncoes.pas=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2013/10/28 22:17:09.000.304,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroCaixa.dfm=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2013/10/28 22:17:09.000.304,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroCaixa.pas=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2013/11/19 23:27:51.000.894,C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm=C:\Users\thiago-pc\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroPagar.dfm</Transaction>
+    <Transaction>2013/12/10 21:47:45.000.068,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroReceber.dfm=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2013/12/10 21:47:45.000.068,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmCadastroReceber.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2013/12/26 23:05:39.000.245,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\datamodule\uDmRelatorios.dfm=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2013/12/26 23:05:39.000.245,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\datamodule\uDmRelatorios.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/02/04 21:22:45.000.887,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmConsReceber.dfm=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2014/02/04 21:22:45.000.887,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmConsReceber.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/02/04 21:23:47.000.014,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmConsPagar.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/02/04 21:23:47.000.014,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmConsPagar.dfm=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2014/03/05 22:22:56.000.464,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmLogin.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/03/05 22:22:56.000.464,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmLogin.dfm=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2014/03/05 22:37:22.000.641,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\classes\uUsuario.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/04/18 21:41:11.000.623,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmBaixarPagar.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/04/18 21:41:11.000.623,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmBaixarPagar.dfm=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2014/04/18 21:41:20.000.103,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmBaixarReceber.dfm=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit2.dfm</Transaction>
+    <Transaction>2014/04/18 21:41:20.000.103,C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\view\uFrmBaixarReceber.pas=C:\Users\Thiago\Documents\GitHub\sisfinanceiro_delphi_mysql\Unit2.pas</Transaction>
+    <Transaction>2014/07/31 21:42:15.000.231,C:\sisfinanceiro_delphi_mysql\view\uFrmSplash.pas=C:\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/07/31 21:42:15.000.231,C:\sisfinanceiro_delphi_mysql\view\uFrmSplash.dfm=C:\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2014/09/20 20:55:50.000.609,C:\sisfinanceiro_delphi_mysql\classes\uSistema.pas=C:\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/10/18 23:26:25.000.676,C:\sisfinanceiro_delphi_mysql\classes\uGetConexao.pas=C:\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/10/18 23:33:29.000.613,C:\sisfinanceiro_delphi_mysql\classes\uSQL.pas=C:\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/10/18 23:38:54.000.638,C:\sisfinanceiro_delphi_mysql\view\uFrmSaldoCaixa.pas=C:\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2014/10/18 23:38:54.000.638,C:\sisfinanceiro_delphi_mysql\view\uFrmSaldoCaixa.dfm=C:\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2014/10/18 23:53:48.000.397,C:\sisfinanceiro_delphi_mysql\classes\uCaixa.pas=C:\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2015/02/07 14:36:19.000.987,C:\sisfinanceiro_delphi_mysql\Unit1.dfm=C:\sisfinanceiro_delphi_mysql\view\uFrmDetalhesReceber.dfm</Transaction>
+    <Transaction>2015/02/07 15:09:33.000.778,C:\sisfinanceiro_delphi_mysql\Unit1.dfm=C:\sisfinanceiro_delphi_mysql\view\uFrmDetalhesPagar.dfm</Transaction>
+    <Transaction>2015/02/07 23:23:43.000.402,C:\sisfinanceiro_delphi_mysql\Unit1.dfm=C:\sisfinanceiro_delphi_mysql\view\uFrmEmitirRecibo.dfm</Transaction>
+    <Transaction>2015/03/19 23:07:26.000.524,C:\sisfinanceiro_delphi_mysql\view\uFrmConsRecibos.dfm=C:\sisfinanceiro_delphi_mysql\Unit1.dfm</Transaction>
+    <Transaction>2015/03/19 23:07:26.000.524,C:\sisfinanceiro_delphi_mysql\view\uFrmConsRecibos.pas=C:\sisfinanceiro_delphi_mysql\Unit1.pas</Transaction>
+    <Transaction>2019/12/30 10:56:46.000.139,F:\DESENVOLVIMENTO\DELPHI\ESTUDOS E IMPLEMENTAÇÕES\sisfinanceiro_delphi_mysql-master\Unit1.dfm=F:\DESENVOLVIMENTO\DELPHI\ESTUDOS E IMPLEMENTAÇÕES\sisfinanceiro_delphi_mysql-master\view\uFrmConfigConexao.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
