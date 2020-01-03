@@ -19,9 +19,6 @@ type
     dbgDados: TDBGrid;
     StatusBar1: TStatusBar;
     ImageListCadastro: TImageList;
-    Label1: TLabel;
-    edtPesquisar: TEdit;
-    btnFiltrar: TBitBtn;
     ActAcoes: TActionList;
     acInserir: TAction;
     acEditar: TAction;
@@ -31,16 +28,20 @@ type
     acPesquisar: TAction;
     acImprimir: TAction;
     acFechar: TAction;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
-    SpeedButton3: TSpeedButton;
-    SpeedButton4: TSpeedButton;
-    SpeedButton5: TSpeedButton;
-    SpeedButton6: TSpeedButton;
-    SpeedButton7: TSpeedButton;
-    SpeedButton8: TSpeedButton;
+    btnInserir: TSpeedButton;
+    btnEditar: TSpeedButton;
+    btnExcluir: TSpeedButton;
+    btnSalvar: TSpeedButton;
+    btnCancelar: TSpeedButton;
+    btnPesquisar: TSpeedButton;
+    btnImprimir: TSpeedButton;
+    btnFechar: TSpeedButton;
+    pnlPesquisar: TPanel;
+    btnFiltrar: TBitBtn;
+    edtPesquisar: TEdit;
+    lblPesquisar: TLabel;
+    lblFiltros: TLabel;
     cbxFiltros: TComboBox;
-    Label5: TLabel;
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormShow(Sender: TObject);
@@ -62,7 +63,7 @@ type
       DataCol: Integer; Column: TColumn; State: TGridDrawState);
   private
     { Private declarations }
-    iModo : Integer;
+    cModo : Char;
     procedure LimparTudo;
   public
     { Public declarations }
@@ -90,7 +91,7 @@ end;
 
 procedure TfrmCadastroBasico.acEditarExecute(Sender: TObject);
 begin
-  iModo := 1;
+  cModo := 'A';
   if PageControl1.ActivePage = tbsPesquisar then
   begin
     tbsCadastro.TabVisible  := true;
@@ -116,7 +117,7 @@ begin
       Application.MessageBox('Registro excluído com sucesso!','Informação',0+64);
       TClientDataSet(dsTabela.DataSet).Open;
     except on E : Exception do
-      raise Exception.Create('Erro ao excluir registro: '+E.Message);
+      raise Exception.Create('Erro ao excluir registro: ' + E.Message);
     end;
   end;
 end;
@@ -145,7 +146,7 @@ end;
 
 procedure TfrmCadastroBasico.acInserirExecute(Sender: TObject);
 begin
-  iModo := 0;
+  cModo := 'I';
   if PageControl1.ActivePage = tbsPesquisar then
   begin
     tbsCadastro.TabVisible  := true;
@@ -173,9 +174,9 @@ begin
     TClientDataSet(dsTabela.DataSet).Post;
     TClientDataSet(dsTabela.DataSet).ApplyUpdates(0);
 
-    case iModo of
-      0 : Application.MessageBox('Registro inserido com sucesso!','Informação',MB_OK+MB_ICONINFORMATION);
-      1 : Application.MessageBox('Registro atualizado com sucesso!','Informação',MB_OK+MB_ICONINFORMATION);
+    case cModo of
+      'I' : Application.MessageBox('Registro inserido com sucesso!','Informação',MB_OK+MB_ICONINFORMATION);
+      'A' : Application.MessageBox('Registro atualizado com sucesso!','Informação',MB_OK+MB_ICONINFORMATION);
     end;
     //Limpar os campos
     LimparTudo;
@@ -214,6 +215,7 @@ end;
 procedure TfrmCadastroBasico.FormShow(Sender: TObject);
 begin
   PageControl1.ActivePage := tbsPesquisar;
+  tbsCadastro.TabVisible  := False;
 end;
 
 procedure TfrmCadastroBasico.LimparTudo;
@@ -225,6 +227,7 @@ begin
     if Components[i] is TCustomEdit then
       TCustomEdit(Components[i]).Clear;
   end;
+
   if PageControl1.ActivePage = tbsCadastro then
   begin
     tbsCadastro.TabVisible  := false;

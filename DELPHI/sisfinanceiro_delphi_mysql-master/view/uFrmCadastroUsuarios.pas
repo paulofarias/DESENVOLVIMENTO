@@ -22,6 +22,8 @@ type
     procedure btnFiltrarClick(Sender: TObject);
     procedure acPesquisarExecute(Sender: TObject);
     procedure acImprimirExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -36,6 +38,21 @@ implementation
 {$R *.dfm}
 
 uses uDmDados, uFuncoes{, uDmRelatorios};
+
+procedure TfrmCadastroUsuarios.FormCreate(Sender: TObject);
+begin
+  inherited;
+  Self.Width := 720;
+  Self.Height := 480;
+end;
+
+procedure TfrmCadastroUsuarios.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+  Action := caFree;
+  frmCadastroUsuarios := nil;
+end;
 
 procedure TfrmCadastroUsuarios.acEditarExecute(Sender: TObject);
 begin
@@ -83,7 +100,7 @@ begin
   end;
   if (dsTabela.State in [dsInsert]) and (GetLoginCadastrado(trim(edtLogin.Text))) then
   begin
-    Application.MessageBox('Login encontra-se cadastrado.','Atenção',MB_OK+MB_ICONWARNING);
+    Application.MessageBox('Login encontra-se cadastrado.', 'Atenção', MB_OK+MB_ICONWARNING);
     edtLogin.SetFocus;
     Abort;
   end;
@@ -118,8 +135,8 @@ begin
   begin
     cdsUsuarios.Close;
     case cbxFiltros.ItemIndex of
-      0 : cdsUsuarios.CommandText := 'SELECT * FROM USUARIOS WHERE NOME  LIKE '+QuotedStr('%'+edtPesquisar.Text+'%');
-      1 : cdsUsuarios.CommandText := 'SELECT * FROM USUARIOS WHERE LOGIN LIKE '+QuotedStr('%'+edtPesquisar.Text+'%');
+      0 : cdsUsuarios.CommandText := 'SELECT * FROM USUARIOS WHERE NOME  LIKE '+ QuotedStr('%' + edtPesquisar.Text + '%');
+      1 : cdsUsuarios.CommandText := 'SELECT * FROM USUARIOS WHERE LOGIN LIKE '+ QuotedStr('%' + edtPesquisar.Text + '%');
     end;
     cdsUsuarios.Open;
   end;

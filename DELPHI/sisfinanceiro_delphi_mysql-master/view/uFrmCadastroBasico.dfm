@@ -3,17 +3,19 @@ object frmCadastroBasico: TfrmCadastroBasico
   Top = 0
   BorderIcons = [biSystemMenu]
   Caption = 'Cadastro'
-  ClientHeight = 477
-  ClientWidth = 786
+  ClientHeight = 441
+  ClientWidth = 704
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   KeyPreview = True
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poDefault
+  Visible = True
   OnClose = FormClose
   OnKeyPress = FormKeyPress
   OnShow = FormShow
@@ -21,12 +23,14 @@ object frmCadastroBasico: TfrmCadastroBasico
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
-    Top = 409
-    Width = 786
+    Top = 373
+    Width = 704
     Height = 49
     Align = alBottom
     TabOrder = 0
-    object SpeedButton1: TSpeedButton
+    ExplicitTop = 409
+    ExplicitWidth = 786
+    object btnInserir: TSpeedButton
       Left = 4
       Top = 3
       Width = 89
@@ -34,7 +38,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       Action = acInserir
       Flat = True
     end
-    object SpeedButton2: TSpeedButton
+    object btnEditar: TSpeedButton
       Left = 91
       Top = 3
       Width = 89
@@ -42,7 +46,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       Action = acEditar
       Flat = True
     end
-    object SpeedButton3: TSpeedButton
+    object btnExcluir: TSpeedButton
       Left = 178
       Top = 3
       Width = 89
@@ -50,7 +54,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       Action = acExcluir
       Flat = True
     end
-    object SpeedButton4: TSpeedButton
+    object btnSalvar: TSpeedButton
       Left = 265
       Top = 2
       Width = 89
@@ -58,7 +62,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       Action = acSalvar
       Flat = True
     end
-    object SpeedButton5: TSpeedButton
+    object btnCancelar: TSpeedButton
       Left = 352
       Top = 3
       Width = 89
@@ -66,7 +70,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       Action = acCancelar
       Flat = True
     end
-    object SpeedButton6: TSpeedButton
+    object btnPesquisar: TSpeedButton
       Left = 439
       Top = 3
       Width = 89
@@ -74,7 +78,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       Action = acPesquisar
       Flat = True
     end
-    object SpeedButton7: TSpeedButton
+    object btnImprimir: TSpeedButton
       Left = 526
       Top = 3
       Width = 89
@@ -82,7 +86,7 @@ object frmCadastroBasico: TfrmCadastroBasico
       Action = acImprimir
       Flat = True
     end
-    object SpeedButton8: TSpeedButton
+    object btnFechar: TSpeedButton
       Left = 613
       Top = 3
       Width = 89
@@ -94,42 +98,29 @@ object frmCadastroBasico: TfrmCadastroBasico
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 786
-    Height = 409
-    ActivePage = tbsPesquisar
+    Width = 704
+    Height = 373
+    ActivePage = tbsCadastro
     Align = alClient
     TabOrder = 1
+    ExplicitWidth = 786
+    ExplicitHeight = 409
     object tbsCadastro: TTabSheet
       Caption = 'Cadastro'
-      TabVisible = False
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
+      ExplicitWidth = 778
+      ExplicitHeight = 381
     end
     object tbsPesquisar: TTabSheet
       Caption = 'Pesquisar'
       ImageIndex = 1
-      object Label1: TLabel
-        Left = 205
-        Top = 6
-        Width = 50
-        Height = 13
-        Caption = 'Pesquisar:'
-      end
-      object Label5: TLabel
-        Left = 0
-        Top = 6
-        Width = 33
-        Height = 13
-        Caption = 'Filtros:'
-      end
+      ExplicitWidth = 778
+      ExplicitHeight = 381
       object dbgDados: TDBGrid
         Left = 0
-        Top = 64
-        Width = 778
-        Height = 317
-        Align = alBottom
+        Top = 56
+        Width = 696
+        Height = 289
+        Align = alClient
         DataSource = dsTabela
         DrawingStyle = gdsGradient
         Options = [dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -141,40 +132,63 @@ object frmCadastroBasico: TfrmCadastroBasico
         TitleFont.Style = []
         OnDrawColumnCell = dbgDadosDrawColumnCell
       end
-      object edtPesquisar: TEdit
-        Left = 205
-        Top = 25
-        Width = 364
-        Height = 21
-        TabOrder = 1
-      end
-      object btnFiltrar: TBitBtn
-        Left = 575
-        Top = 23
-        Width = 75
-        Height = 25
-        Caption = 'Filtrar'
-        TabOrder = 2
-      end
-      object cbxFiltros: TComboBox
+      object pnlPesquisar: TPanel
         Left = 0
-        Top = 25
-        Width = 199
-        Height = 21
-        Style = csDropDownList
-        TabOrder = 3
+        Top = 0
+        Width = 696
+        Height = 56
+        Align = alTop
+        TabOrder = 1
+        object lblPesquisar: TLabel
+          Left = 211
+          Top = 6
+          Width = 46
+          Height = 13
+          Caption = 'Pesquisar'
+        end
+        object lblFiltros: TLabel
+          Left = 8
+          Top = 6
+          Width = 29
+          Height = 13
+          Caption = 'Filtros'
+        end
+        object btnFiltrar: TBitBtn
+          Left = 578
+          Top = 25
+          Width = 75
+          Height = 21
+          Caption = 'Filtrar'
+          TabOrder = 0
+        end
+        object edtPesquisar: TEdit
+          Left = 211
+          Top = 25
+          Width = 364
+          Height = 21
+          TabOrder = 1
+        end
+        object cbxFiltros: TComboBox
+          Left = 8
+          Top = 25
+          Width = 199
+          Height = 21
+          Style = csDropDownList
+          TabOrder = 2
+        end
       end
     end
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 458
-    Width = 786
+    Top = 422
+    Width = 704
     Height = 19
     Panels = <>
+    ExplicitTop = 458
+    ExplicitWidth = 786
   end
   object dsTabela: TDataSource
-    DataSet = DmDados.cdsCaixa
     Left = 728
     Top = 32
   end

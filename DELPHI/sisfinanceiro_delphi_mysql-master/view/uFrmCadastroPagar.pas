@@ -41,6 +41,7 @@ type
     procedure btnFiltrarClick(Sender: TObject);
     procedure acExcluirExecute(Sender: TObject);
     procedure acImprimirExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -233,6 +234,14 @@ procedure TfrmCadastroPagar.DBGrid1DrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
 begin
   ZebrarDBGrid(dsParcelas,DBGrid1,State,Rect,Column);
+end;
+
+procedure TfrmCadastroPagar.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+  Action := caFree;
+  frmCadastroPagar := nil;
 end;
 
 end.

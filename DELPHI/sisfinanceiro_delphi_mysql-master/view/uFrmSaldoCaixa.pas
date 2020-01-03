@@ -3,9 +3,9 @@ unit uFrmSaldoCaixa;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons,
-  Vcl.ComCtrls, uCaixa;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics, Vcl.Controls, Vcl.Forms, Vcl.Dialogs,
+  Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.Buttons, Vcl.ComCtrls, uCaixa;
 
 type
   TfrmSaldoCaixa = class(TForm)
@@ -28,6 +28,7 @@ type
     procedure FormDestroy(Sender: TObject);
     procedure btnFiltrarClick(Sender: TObject);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormShow(Sender: TObject);
   private
     Caixa : TCaixa;
     procedure PreencherCampos;
@@ -67,6 +68,12 @@ procedure TfrmSaldoCaixa.FormKeyDown(Sender: TObject; var Key: Word;
 begin
   if key = vk_f2 then
     btnFiltrar.Click;
+end;
+
+procedure TfrmSaldoCaixa.FormShow(Sender: TObject);
+begin
+  DateTimePicker1.Date := now - 30;
+  DateTimePicker2.Date := now + 30;
 end;
 
 procedure TfrmSaldoCaixa.PreencherCampos;

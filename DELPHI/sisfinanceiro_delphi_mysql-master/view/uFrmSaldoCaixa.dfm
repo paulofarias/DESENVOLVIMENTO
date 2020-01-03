@@ -11,12 +11,15 @@ object frmSaldoCaixa: TfrmSaldoCaixa
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  FormStyle = fsMDIChild
   KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
+  Visible = True
   OnCreate = FormCreate
   OnDestroy = FormDestroy
   OnKeyDown = FormKeyDown
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Label3: TLabel
@@ -150,8 +153,8 @@ object frmSaldoCaixa: TfrmSaldoCaixa
       Top = 19
       Width = 97
       Height = 21
-      Date = 41930.987284502310000000
-      Time = 41930.987284502310000000
+      Date = 41930.000000000000000000
+      Time = 0.987284502312832000
       TabOrder = 0
     end
     object DateTimePicker2: TDateTimePicker
@@ -159,8 +162,8 @@ object frmSaldoCaixa: TfrmSaldoCaixa
       Top = 19
       Width = 97
       Height = 21
-      Date = 41930.987284502310000000
-      Time = 41930.987284502310000000
+      Date = 41930.000000000000000000
+      Time = 0.987284502312832000
       TabOrder = 1
     end
     object btnFiltrar: TBitBtn

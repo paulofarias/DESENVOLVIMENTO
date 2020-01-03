@@ -5,10 +5,6 @@ inherited frmCadastroReceber: TfrmCadastroReceber
   inherited PageControl1: TPageControl
     ActivePage = tbsCadastro
     inherited tbsCadastro: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 778
-      ExplicitHeight = 381
       object Label2: TLabel
         Left = 16
         Top = 16

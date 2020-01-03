@@ -1,14 +1,11 @@
 inherited frmCadastroUsuarios: TfrmCadastroUsuarios
   Caption = 'Cadastro de Usu'#225'rios'
-  ExplicitLeft = -39
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl1: TPageControl
+    ActivePage = tbsPesquisar
     inherited tbsCadastro: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 778
-      ExplicitHeight = 381
       object Label2: TLabel
         Left = 16
         Top = 78
@@ -69,13 +66,15 @@ inherited frmCadastroUsuarios: TfrmCadastroUsuarios
           item
             Expanded = False
             FieldName = 'nome'
-            Width = 448
+            Title.Caption = 'Nome'
+            Width = 360
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'login'
-            Width = 201
+            Title.Caption = 'Login'
+            Width = 207
             Visible = True
           end
           item
@@ -96,19 +95,16 @@ inherited frmCadastroUsuarios: TfrmCadastroUsuarios
             Visible = True
           end>
       end
-      inherited btnFiltrar: TBitBtn
-        OnClick = btnFiltrarClick
-      end
-      inherited cbxFiltros: TComboBox
-        ItemIndex = 0
-        Text = 'Nome'
-        Items.Strings = (
-          'Nome'
-          'Login')
+      inherited pnlPesquisar: TPanel
+        inherited btnFiltrar: TBitBtn
+          OnClick = btnFiltrarClick
+        end
       end
     end
   end
   inherited dsTabela: TDataSource
     DataSet = DmDados.cdsUsuarios
+    Left = 624
+    Top = 152
   end
 end

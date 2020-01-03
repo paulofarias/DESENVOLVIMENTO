@@ -14,6 +14,7 @@ object frmBaixarReceber: TfrmBaixarReceber
   KeyPreview = True
   OldCreateOrder = False
   Position = poScreenCenter
+  OnClose = FormClose
   OnKeyPress = FormKeyPress
   OnShow = FormShow
   PixelsPerInch = 96

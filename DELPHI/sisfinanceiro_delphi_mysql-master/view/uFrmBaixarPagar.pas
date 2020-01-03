@@ -29,6 +29,7 @@ type
     procedure FormKeyPress(Sender: TObject; var Key: Char);
     procedure FormShow(Sender: TObject);
     procedure btnBaixarClick(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     fValorParcela : Currency;
     fValorAbatido : Currency;
@@ -98,6 +99,12 @@ begin
       raise Exception.Create('Erro ao efetuar baixa: '+E.Message);
     end;
   end;
+end;
+
+procedure TfrmBaixarPagar.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+  frmBaixarPagar := nil;
 end;
 
 procedure TfrmBaixarPagar.FormKeyPress(Sender: TObject; var Key: Char);

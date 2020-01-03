@@ -41,6 +41,8 @@ type
     procedure acPesquisarExecute(Sender: TObject);
     procedure acExcluirExecute(Sender: TObject);
     procedure acImprimirExecute(Sender: TObject);
+    procedure acEditarExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -55,6 +57,14 @@ implementation
 {$R *.dfm}
 
 uses uDmDados, uFuncoes{, uDmRelatorios};
+
+procedure TfrmCadastroReceber.acEditarExecute(Sender: TObject);
+begin
+  inherited;
+  edtDocumento.Text := dsTabela.DataSet.FieldByName('documento').AsString;
+  edtDescricao.Text := dsTabela.DataSet.FieldByName('descricao').AsString;
+
+end;
 
 procedure TfrmCadastroReceber.acExcluirExecute(Sender: TObject);
 begin
@@ -233,6 +243,14 @@ procedure TfrmCadastroReceber.DBGrid1DrawColumnCell(Sender: TObject;
   const Rect: TRect; DataCol: Integer; Column: TColumn; State: TGridDrawState);
 begin
   ZebrarDBGrid(dsParcelas,DBGrid1,State,Rect,Column);
+end;
+
+procedure TfrmCadastroReceber.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+  Action := caFree;
+  frmCadastroReceber := nil;
 end;
 
 end.

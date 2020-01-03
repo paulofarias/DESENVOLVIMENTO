@@ -11,10 +11,6 @@ inherited frmCadastroPagar: TfrmCadastroPagar
   end
   inherited PageControl1: TPageControl
     inherited tbsCadastro: TTabSheet
-      ExplicitLeft = 4
-      ExplicitTop = 24
-      ExplicitWidth = 778
-      ExplicitHeight = 381
       object Label2: TLabel
         Left = 16
         Top = 16
@@ -193,6 +189,7 @@ inherited frmCadastroPagar: TfrmCadastroPagar
           item
             Expanded = False
             FieldName = 'numero_doc'
+            Width = 64
             Visible = True
           end
           item
@@ -209,16 +206,19 @@ inherited frmCadastroPagar: TfrmCadastroPagar
           item
             Expanded = False
             FieldName = 'vlr_parcela'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'vlr_compra'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'vlr_abatido'
+            Width = 64
             Visible = True
           end
           item
@@ -229,16 +229,19 @@ inherited frmCadastroPagar: TfrmCadastroPagar
           item
             Expanded = False
             FieldName = 'dt_cadastro'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'dt_vencimento'
+            Width = 64
             Visible = True
           end
           item
             Expanded = False
             FieldName = 'dt_pagamento'
+            Width = 64
             Visible = True
           end>
       end

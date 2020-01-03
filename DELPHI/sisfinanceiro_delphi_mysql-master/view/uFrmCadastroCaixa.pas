@@ -23,6 +23,7 @@ type
     procedure acPesquisarExecute(Sender: TObject);
     procedure btnFiltrarClick(Sender: TObject);
     procedure acImprimirExecute(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -130,6 +131,14 @@ begin
     end;
     cdsUsuarios.Open;
   end;
+end;
+
+procedure TfrmCadastroCaixa.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  inherited;
+  Action := caFree;
+  frmCadastroCaixa := nil;
 end;
 
 end.

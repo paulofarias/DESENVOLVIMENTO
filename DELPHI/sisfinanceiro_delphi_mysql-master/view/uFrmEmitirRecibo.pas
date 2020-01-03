@@ -80,7 +80,7 @@ end;
 
 procedure TfrmEmitirRecibo.btnPesquisarClick(Sender: TObject);
 begin
-  CriarForm(TfrmConsRecibos,frmConsRecibos);
+  //CriarForm(TfrmConsRecibos, frmConsRecibos);
 end;
 
 procedure TfrmEmitirRecibo.btnSalvarClick(Sender: TObject);
