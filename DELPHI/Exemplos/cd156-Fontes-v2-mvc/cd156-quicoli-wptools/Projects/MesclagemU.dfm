@@ -1,0 +1,36 @@
+object MesclagemF: TMesclagemF
+  Left = 0
+  Top = 0
+  Caption = 'MesclagemF'
+  ClientHeight = 228
+  ClientWidth = 420
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object WPRichText1: TWPRichText
+    Left = 8
+    Top = 8
+    Width = 401
+    Height = 209
+    RTFVariables = <>
+    ProtectedProp = []
+    InsertPointAttr.TextColor = clRed
+    InsertPointAttr.UseTextColor = True
+    HyperlinkTextAttr.Underline = tsTRUE
+    HyperlinkTextAttr.UnderlineColor = clBlue
+    HyperlinkTextAttr.UseUnderlineColor = True
+    HyperlinkTextAttr.HotUnderlineColor = clRed
+    HyperlinkTextAttr.HotTextColor = clRed
+    HyperlinkTextAttr.HotUnderline = tsTRUE
+    HyperlinkTextAttr.HotStyleIsActive = True
+    HiddenTextAttr.Hidden = True
+    OnMailMergeGetText = WPRichText1MailMergeGetText
+    TabOrder = 0
+  end
+end

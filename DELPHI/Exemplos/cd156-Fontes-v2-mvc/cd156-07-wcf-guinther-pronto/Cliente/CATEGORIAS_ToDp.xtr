@@ -1,0 +1,106 @@
+<XmlTransformation Version="1.0"><Transform Direction="ToCds" DataEncoding="utf-8"><SelectEach dest="DATAPACKET\ROWDATA\ROW" from="\feed\entry"><Select dest="@IdCategoria" from="\content\m:properties\d:IdCategoria"/><Select dest="@Nome" from="\content\m:properties\d:Nome"/></SelectEach></Transform><XmlSchema RootName="feed"><![CDATA[<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="feed" type="feedType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="feedType">
+    <sequence>
+      <element name="id" type="idType"/>
+      <element name="title" type="titleType"/>
+      <element name="updated" type="updatedType"/>
+      <element name="link" type="linkType"/>
+      <element name="entry" type="entryType" minOccurs="0" maxOccurs="unbounded"/>
+    </sequence>
+    <attribute name="xmlns" type="xs:string"/>
+    <attribute name="xmlns:d" type="xs:string"/>
+    <attribute name="xmlns:m" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="id" type="idType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="idType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="title" type="titleType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="titleType">
+    <sequence/>
+    <attribute name="type" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="updated" type="updatedType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="updatedType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="link" type="linkType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="linkType">
+    <sequence/>
+    <attribute name="rel" type="xs:string"/>
+    <attribute name="title" type="xs:string"/>
+    <attribute name="href" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="entry" type="entryType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="entryType">
+    <sequence>
+      <element name="id" type="idType"/>
+      <element name="category" type="categoryType"/>
+      <element name="link" type="linkType" minOccurs="0" maxOccurs="unbounded"/>
+      <element name="title" type="titleType"/>
+      <element name="updated" type="updatedType"/>
+      <element name="author" type="authorType"/>
+      <element name="content" type="contentType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="id" type="idType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="idType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="category" type="categoryType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="categoryType">
+    <sequence/>
+    <attribute name="term" type="xs:string"/>
+    <attribute name="scheme" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="link" type="linkType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="linkType">
+    <sequence/>
+    <attribute name="rel" type="xs:string"/>
+    <attribute name="title" type="xs:string"/>
+    <attribute name="href" type="xs:string"/>
+    <attribute name="type" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="title" type="titleType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="titleType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="updated" type="updatedType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="updatedType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="author" type="authorType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="authorType">
+    <sequence>
+      <element name="name" type="nameType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="name" type="nameType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="nameType">
+    <restriction base="xs:string"/>
+  </simpleType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="content" type="contentType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="contentType">
+    <sequence>
+      <element name="m:properties" type="m:propertiesType"/>
+    </sequence>
+    <attribute name="type" type="xs:string"/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="properties" type="propertiesType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="propertiesType">
+    <sequence>
+      <element name="d:IdCategoria" type="d:IdCategoriaType"/>
+      <element name="d:Nome" type="d:NomeType"/>
+    </sequence>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="IdCategoria" type="IdCategoriaType"/>
+  <complexType xmlns="http://www.w3.org/2001/XMLSchema" name="IdCategoriaType">
+    <sequence/>
+  </complexType>
+  <element xmlns="http://www.w3.org/2001/XMLSchema" name="Nome" type="NomeType"/>
+  <simpleType xmlns="http://www.w3.org/2001/XMLSchema" name="NomeType">
+    <restriction base="xs:string"/>
+  </simpleType>
+</xs:schema>]]></XmlSchema><CdsSkeleton/><XslTransform/><Skeleton><![CDATA[<?xml version="1.0"?><DATAPACKET Version="2.0"><METADATA><FIELDS><FIELD attrname="IdCategoria" fieldtype="string" WIDTH="1"/><FIELD attrname="Nome" fieldtype="string" WIDTH="11"/></FIELDS><PARAMS/></METADATA><ROWDATA/><METADATA><FIELDS><FIELD attrname="IdCategoria" fieldtype="string" WIDTH="1"/><FIELD attrname="Nome" fieldtype="string" WIDTH="11"/></FIELDS><PARAMS/></METADATA><ROWDATA/></DATAPACKET>
+]]></Skeleton></XmlTransformation>

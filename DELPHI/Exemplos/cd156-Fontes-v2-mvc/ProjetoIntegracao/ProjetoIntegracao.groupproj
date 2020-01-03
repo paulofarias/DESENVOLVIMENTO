@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7EEDAB6F-3F95-4E46-B696-CA98E4434EC8}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ClientDesktop\ClientDesktop.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WebServiceRest\WebServiceRest.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ClientMobile\ClientMobile.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ClientDesktop">
+        <MSBuild Projects="ClientDesktop\ClientDesktop.dproj"/>
+    </Target>
+    <Target Name="ClientDesktop:Clean">
+        <MSBuild Projects="ClientDesktop\ClientDesktop.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClientDesktop:Make">
+        <MSBuild Projects="ClientDesktop\ClientDesktop.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WebServiceRest">
+        <MSBuild Projects="WebServiceRest\WebServiceRest.dproj"/>
+    </Target>
+    <Target Name="WebServiceRest:Clean">
+        <MSBuild Projects="WebServiceRest\WebServiceRest.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WebServiceRest:Make">
+        <MSBuild Projects="WebServiceRest\WebServiceRest.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClientMobile">
+        <MSBuild Projects="ClientMobile\ClientMobile.dproj"/>
+    </Target>
+    <Target Name="ClientMobile:Clean">
+        <MSBuild Projects="ClientMobile\ClientMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClientMobile:Make">
+        <MSBuild Projects="ClientMobile\ClientMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ClientDesktop;WebServiceRest;ClientMobile"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ClientDesktop:Clean;WebServiceRest:Clean;ClientMobile:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ClientDesktop:Make;WebServiceRest:Make;ClientMobile:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/03/27 09:53:39.000.592,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/07 14:40:09.000.356,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/01/09 10:55:49.000.175,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/01/09 13:14:57.000.105,C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\paquicoli\Documents\RAD Studio\Projects\EditorBasicoU.dfm</Transaction>
+    <Transaction>2014/01/09 13:14:57.000.105,C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\paquicoli\Documents\RAD Studio\Projects\EditorBasicoU.pas</Transaction>
+    <Transaction>2014/01/09 13:15:04.000.182,C:\Users\paquicoli\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\paquicoli\Documents\RAD Studio\Projects\EditorBasico.dproj</Transaction>
+    <Transaction>2014/01/21 08:36:25.000.238,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2014/01/21 08:37:31.000.961,C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit2.dfm=C:\Users\paquicoli\Documents\RAD Studio\Projects\CamposU.dfm</Transaction>
+    <Transaction>2014/01/21 08:37:31.000.961,C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit2.pas=C:\Users\paquicoli\Documents\RAD Studio\Projects\CamposU.pas</Transaction>
+  </Transactions>
+</BorlandProject>

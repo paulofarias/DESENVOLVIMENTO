@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/03/27 09:53:39.000.592,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/07 14:40:09.000.356,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/12/04 14:28:26.000.606,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/12/04 14:29:43.000.907,D:\Paulo\Projetos\WPNHunspell\Demo\TesteU.pas=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/12/04 14:29:43.000.907,D:\Paulo\Projetos\WPNHunspell\Demo\TesteU.dfm=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2013/12/04 14:29:49.000.919,D:\Paulo\Projetos\WPNHunspell\Demo\Teste.dproj=C:\Users\paquicoli\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2013/12/04 14:43:41.000.113,=D:\Paulo\Projetos\WPNHunspell\NHunspell.pas</Transaction>
+    <Transaction>2013/12/04 14:43:50.000.997,=D:\Paulo\Projetos\WPNHunspell\WPNHunspellU.pas</Transaction>
+    <Transaction>2013/12/04 14:45:07.000.692,D:\Paulo\Projetos\WPNHunspell\NHunspell.pas=</Transaction>
+    <Transaction>2013/12/04 16:30:41.000.300,=D:\Paulo\Projetos\WPNHunspell\Demo\Unit1.pas</Transaction>
+    <Transaction>2013/12/04 16:33:29.000.442,D:\Paulo\Projetos\WPNHunspell\SpellDlgU.pas=D:\Paulo\Projetos\WPNHunspell\Demo\Unit1.pas</Transaction>
+    <Transaction>2013/12/04 16:33:29.000.442,D:\Paulo\Projetos\WPNHunspell\SpellDlgU.dfm=D:\Paulo\Projetos\WPNHunspell\Demo\Unit1.dfm</Transaction>
+    <Transaction>2013/12/05 09:14:18.000.257,D:\Paulo\Projetos\WPNHunspell\WPNHunspellU.pas=</Transaction>
+    <Transaction>2013/12/05 09:14:27.000.272,D:\Paulo\Projetos\WPNHunspell\SpellDlgU.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

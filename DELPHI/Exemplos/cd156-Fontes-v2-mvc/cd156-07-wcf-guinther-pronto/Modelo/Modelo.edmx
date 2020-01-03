@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ESTOQUEModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ESTOQUEModelStoreContainer">
+          <EntitySet Name="CATEGORIAS" EntityType="ESTOQUEModel.Store.CATEGORIAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PRODUTOS" EntityType="ESTOQUEModel.Store.PRODUTOS" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_PRODUTOS_CATEGORIAS" Association="ESTOQUEModel.Store.FK_PRODUTOS_CATEGORIAS">
+            <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
+            <End Role="PRODUTOS" EntitySet="PRODUTOS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CATEGORIAS">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PRODUTOS">
+          <Key>
+            <PropertyRef Name="IdProduto" />
+          </Key>
+          <Property Name="IdProduto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="IDCategoria" Type="int" />
+        </EntityType>
+        <Association Name="FK_PRODUTOS_CATEGORIAS">
+          <End Role="CATEGORIAS" Type="ESTOQUEModel.Store.CATEGORIAS" Multiplicity="0..1" />
+          <End Role="PRODUTOS" Type="ESTOQUEModel.Store.PRODUTOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIAS">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="PRODUTOS">
+              <PropertyRef Name="IDCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ESTOQUEModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ESTOQUEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CATEGORIAS" EntityType="ESTOQUEModel.CATEGORIA" />
+          <EntitySet Name="PRODUTOS" EntityType="ESTOQUEModel.PRODUTO" />
+          <AssociationSet Name="FK_PRODUTOS_CATEGORIAS" Association="ESTOQUEModel.FK_PRODUTOS_CATEGORIAS">
+            <End Role="CATEGORIAS" EntitySet="CATEGORIAS" />
+            <End Role="PRODUTOS" EntitySet="PRODUTOS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="CATEGORIA">
+          <Key>
+            <PropertyRef Name="IdCategoria" />
+          </Key>
+          <Property Name="IdCategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="PRODUTOS" Relationship="ESTOQUEModel.FK_PRODUTOS_CATEGORIAS" FromRole="CATEGORIAS" ToRole="PRODUTOS" />
+        </EntityType>
+        <EntityType Name="PRODUTO">
+          <Key>
+            <PropertyRef Name="IdProduto" />
+          </Key>
+          <Property Name="IdProduto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="IDCategoria" Type="Int32" />
+          <NavigationProperty Name="CATEGORIA" Relationship="ESTOQUEModel.FK_PRODUTOS_CATEGORIAS" FromRole="PRODUTOS" ToRole="CATEGORIAS" />
+        </EntityType>
+        <Association Name="FK_PRODUTOS_CATEGORIAS">
+          <End Role="CATEGORIAS" Type="ESTOQUEModel.CATEGORIA" Multiplicity="0..1" />
+          <End Role="PRODUTOS" Type="ESTOQUEModel.PRODUTO" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORIAS">
+              <PropertyRef Name="IdCategoria" />
+            </Principal>
+            <Dependent Role="PRODUTOS">
+              <PropertyRef Name="IDCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ESTOQUEModelStoreContainer" CdmEntityContainer="ESTOQUEEntities">
+          <EntitySetMapping Name="CATEGORIAS">
+            <EntityTypeMapping TypeName="ESTOQUEModel.CATEGORIA">
+              <MappingFragment StoreEntitySet="CATEGORIAS">
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PRODUTOS">
+            <EntityTypeMapping TypeName="ESTOQUEModel.PRODUTO">
+              <MappingFragment StoreEntitySet="PRODUTOS">
+                <ScalarProperty Name="IdProduto" ColumnName="IdProduto" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IDCategoria" ColumnName="IDCategoria" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

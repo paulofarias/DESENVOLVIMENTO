@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2013/03/27 09:53:39.000.592,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/07 14:40:09.000.356,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/01/21 10:05:40.210,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/01/21 10:11:28.277,C:\Users\paquicoli\Documents\RAD Studio\Projects\CadastroU.pas=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/01/21 10:11:28.277,C:\Users\paquicoli\Documents\RAD Studio\Projects\CadastroU.dfm=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2014/01/21 10:11:34.542,C:\Users\paquicoli\Documents\RAD Studio\Projects\Cadastro.dproj=C:\Users\paquicoli\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2014/01/21 10:30:01.954,=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/01/21 10:30:23.452,C:\Users\paquicoli\Documents\RAD Studio\Projects\MesclagemU.pas=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2014/01/21 10:30:23.452,C:\Users\paquicoli\Documents\RAD Studio\Projects\MesclagemU.dfm=C:\Users\paquicoli\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2014/01/21 10:31:50.974,C:\Users\paquicoli\Documents\RAD Studio\Projects\MesclagemU.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

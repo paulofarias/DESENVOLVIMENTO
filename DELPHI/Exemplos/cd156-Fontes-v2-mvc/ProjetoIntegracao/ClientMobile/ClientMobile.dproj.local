@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2012/08/04 15:51:24.000.900,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2012/08/04 16:02:48.000.634,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2012/08/04 16:36:06.000.468,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2012/09/24 09:38:38.000.087,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/04/11 14:25:39.000.479,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/04/23 16:06:13.000.878,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/05/14 14:18:14.000.585,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/05/27 16:39:54.000.790,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/07/06 21:16:41.000.735,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/07/06 21:17:57.000.473,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/07/06 21:34:23.000.803,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/26 17:19:46.000.886,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/08/26 17:35:25.000.314,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/10/10 16:45:22.000.406,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/10/10 16:45:47.000.320,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/10/15 10:04:30.000.428,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2013/11/23 20:29:34.000.843,=C:\Users\Renan\Documents\RAD Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2013/11/23 20:30:26.000.253,C:\Users\Renan\Documents\RAD Studio\Projects\Unit2.fmx=C:\Users\Renan\Desktop\Projetos Mobile\ArtigoRenan2\ClientMobile\UMenu.fmx</Transaction>
+    <Transaction>2013/11/23 20:30:26.000.253,C:\Users\Renan\Documents\RAD Studio\Projects\Unit2.pas=C:\Users\Renan\Desktop\Projetos Mobile\ArtigoRenan2\ClientMobile\UMenu.pas</Transaction>
+    <Transaction>2013/11/23 20:30:32.000.984,C:\Users\Renan\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\Renan\Desktop\Projetos Mobile\ArtigoRenan2\ClientMobile\ClientMobile.dproj</Transaction>
+  </Transactions>
+	<MobileDevice>00091ac850d55f</MobileDevice>
+</BorlandProject>

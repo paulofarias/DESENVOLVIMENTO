@@ -1,0 +1,277 @@
+object FMenu: TFMenu
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 508
+  ClientWidth = 320
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [dkDesktop]
+  OnShow = FormShow
+  DesignerMobile = True
+  DesignerWidth = 320
+  DesignerHeight = 533
+  DesignerDeviceName = 'Samsung Galaxy S2'
+  DesignerOrientation = 0
+  DesignerOSVersion = ''
+  object ToolBar1: TToolBar
+    Height = 48.000000000000000000
+    TabOrder = 0
+    Width = 320.000000000000000000
+    object Label1: TLabel
+      Align = alCenter
+      Height = 23.000000000000000000
+      Text = 'Cadastro de Contatos Mobile'
+      Width = 249.000000000000000000
+      Trimming = ttCharacter
+    end
+  end
+  object Abas: TTabControl
+    Align = alClient
+    FullSize = True
+    Height = 460.000000000000000000
+    TabHeight = 49.000000000000000000
+    TabIndex = 2
+    TabOrder = 1
+    TabPosition = tpNone
+    Width = 320.000000000000000000
+    object AbaMenu: TTabItem
+      WordWrap = False
+      Height = 8.000000000000000000
+      IsSelected = False
+      Position.X = 146.000000000000000000
+      Position.Y = 441.000000000000000000
+      TabOrder = 0
+      Text = 'AbaMenu'
+      Trimming = ttCharacter
+      Width = 8.000000000000000000
+      object BtnNovo: TButton
+        Height = 44.000000000000000000
+        Position.X = 55.000000000000000000
+        Position.Y = 80.000000000000000000
+        TabOrder = 0
+        Text = 'Novo'
+        Trimming = ttCharacter
+        Width = 209.000000000000000000
+        OnClick = BtnNovoClick
+      end
+      object BtnPesquisa: TButton
+        Height = 44.000000000000000000
+        Position.X = 55.000000000000000000
+        Position.Y = 128.000000000000000000
+        TabOrder = 1
+        Text = 'Pesquisa'
+        Trimming = ttCharacter
+        Width = 209.000000000000000000
+        OnClick = BtnPesquisaClick
+      end
+      object BtnSair: TButton
+        Height = 44.000000000000000000
+        Position.X = 55.000000000000000000
+        Position.Y = 176.000000000000000000
+        TabOrder = 2
+        Text = 'Sair'
+        Trimming = ttCharacter
+        Width = 209.000000000000000000
+        OnClick = BtnSairClick
+      end
+    end
+    object AbaNovo: TTabItem
+      WordWrap = False
+      Height = 8.000000000000000000
+      IsSelected = False
+      Position.X = 156.000000000000000000
+      Position.Y = 441.000000000000000000
+      TabOrder = 1
+      Text = 'AbaNovo'
+      Trimming = ttCharacter
+      Width = 8.000000000000000000
+      object ToolBar2: TToolBar
+        Align = alBottom
+        Height = 48.000000000000000000
+        Position.Y = 412.000000000000000000
+        TabOrder = 0
+        Width = 320.000000000000000000
+        object BtnConfirmaContato: TSpeedButton
+          Align = alRight
+          Height = 48.000000000000000000
+          Position.X = 216.000000000000000000
+          StyleLookup = 'donetoolbutton'
+          Text = 'Confirma'
+          TextAlign = taLeading
+          Trimming = ttCharacter
+          Width = 104.000000000000000000
+          OnClick = BtnConfirmaContatoClick
+        end
+        object BtrnVoltarAbaContato: TSpeedButton
+          Align = alLeft
+          Height = 48.000000000000000000
+          StyleLookup = 'priortoolbutton'
+          Text = 'BtrnVoltarAbaLancto'
+          Trimming = ttCharacter
+          Width = 48.000000000000000000
+          OnClick = BtrnVoltarAbaContatoClick
+        end
+      end
+      object Label2: TLabel
+        Font.Size = 12.000000000000000000
+        StyledSettings = [ssFamily, ssStyle, ssFontColor]
+        Height = 23.000000000000000000
+        Position.X = 24.000000000000000000
+        Position.Y = 24.000000000000000000
+        Text = 'Nome'
+        Width = 82.000000000000000000
+        Trimming = ttCharacter
+      end
+      object EdtNome: TEdit
+        Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+        TabOrder = 2
+        Position.X = 27.000000000000000000
+        Position.Y = 48.000000000000000000
+        Width = 265.000000000000000000
+        Height = 32.000000000000000000
+        KillFocusByReturn = False
+      end
+      object Label3: TLabel
+        Font.Size = 12.000000000000000000
+        StyledSettings = [ssFamily, ssStyle, ssFontColor]
+        Height = 23.000000000000000000
+        Position.X = 24.000000000000000000
+        Position.Y = 96.000000000000000000
+        Text = 'Email'
+        Width = 82.000000000000000000
+        Trimming = ttCharacter
+      end
+      object EdtEmail: TEdit
+        Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+        TabOrder = 4
+        KeyboardType = vktEmailAddress
+        Position.X = 27.000000000000000000
+        Position.Y = 120.000000000000000000
+        Width = 265.000000000000000000
+        Height = 32.000000000000000000
+        KillFocusByReturn = False
+      end
+      object Label4: TLabel
+        Font.Size = 12.000000000000000000
+        StyledSettings = [ssFamily, ssStyle, ssFontColor]
+        Height = 23.000000000000000000
+        Position.X = 24.000000000000000000
+        Position.Y = 176.000000000000000000
+        Text = 'Telefone'
+        Width = 82.000000000000000000
+        Trimming = ttCharacter
+      end
+      object EdtTelefone: TEdit
+        Touch.InteractiveGestures = [igLongTap, igDoubleTap]
+        TabOrder = 6
+        KeyboardType = vktNamePhonePad
+        Position.X = 27.000000000000000000
+        Position.Y = 200.000000000000000000
+        Width = 265.000000000000000000
+        Height = 32.000000000000000000
+        KillFocusByReturn = False
+      end
+    end
+    object AbaPesquisa: TTabItem
+      WordWrap = False
+      Height = 8.000000000000000000
+      IsSelected = True
+      Position.X = 166.000000000000000000
+      Position.Y = 441.000000000000000000
+      TabOrder = 2
+      Text = 'AbaPesquisa'
+      Trimming = ttCharacter
+      Width = 8.000000000000000000
+      object GrupoFiltro: TGroupBox
+        Align = alTop
+        Height = 70.000000000000000000
+        Text = 'Filtro'
+        Width = 320.000000000000000000
+        TabOrder = 0
+        object RBtnNome: TRadioButton
+          Font.Size = 12.000000000000000000
+          StyledSettings = [ssFamily, ssStyle, ssFontColor]
+          GroupName = 'Filtro'
+          Height = 23.000000000000000000
+          IsChecked = True
+          Position.X = 31.000000000000000000
+          Position.Y = 31.000000000000000000
+          TabOrder = 0
+          Text = 'Nome'
+          Width = 89.000000000000000000
+          OnChange = RBtnNomeChange
+        end
+        object RBtnEmail: TRadioButton
+          Font.Size = 12.000000000000000000
+          StyledSettings = [ssFamily, ssStyle, ssFontColor]
+          GroupName = 'Filtro'
+          Height = 23.000000000000000000
+          Position.X = 115.000000000000000000
+          Position.Y = 31.000000000000000000
+          TabOrder = 1
+          Text = 'Email'
+          Width = 89.000000000000000000
+          OnChange = RBtnNomeChange
+        end
+        object RBtnTelefone: TRadioButton
+          Font.Size = 12.000000000000000000
+          StyledSettings = [ssFamily, ssStyle, ssFontColor]
+          GroupName = 'Filtro'
+          Height = 23.000000000000000000
+          Position.X = 199.000000000000000000
+          Position.Y = 31.000000000000000000
+          TabOrder = 2
+          Text = 'Telefone'
+          Width = 89.000000000000000000
+          OnChange = RBtnNomeChange
+        end
+      end
+      object GridContato: TListView
+        ItemAppearanceClassName = 'TMultiDetailItemAppearance'
+        ItemEditAppearanceClassName = 'TMultiDetailShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = alClient
+        Height = 342.000000000000000000
+        TabOrder = 1
+        Width = 320.000000000000000000
+        ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+        SearchVisible = True
+      end
+      object ToolBar3: TToolBar
+        Align = alBottom
+        Height = 48.000000000000000000
+        Position.Y = 412.000000000000000000
+        TabOrder = 2
+        Width = 320.000000000000000000
+        object BtnVoltarAbaPesquisa: TSpeedButton
+          Align = alLeft
+          Height = 48.000000000000000000
+          StyleLookup = 'priortoolbutton'
+          Text = 'BtrnVoltarAbaLancto'
+          Trimming = ttCharacter
+          Width = 48.000000000000000000
+          OnClick = BtnVoltarAbaPesquisaClick
+        end
+      end
+    end
+  end
+  object IdHTTP1: TIdHTTP
+    AllowCookies = True
+    ProxyParams.BasicAuthentication = False
+    ProxyParams.ProxyPort = 0
+    Request.ContentLength = -1
+    Request.ContentRangeEnd = -1
+    Request.ContentRangeStart = -1
+    Request.ContentRangeInstanceLength = -1
+    Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.BasicAuthentication = True
+    Request.UserAgent = 'Mozilla/3.0 (compatible; Indy Library)'
+    Request.Ranges.Units = 'bytes'
+    Request.Ranges = <>
+    HTTPOptions = [hoForceEncodeParams]
+    Left = 8
+    Top = 8
+  end
+end
