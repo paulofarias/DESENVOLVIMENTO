@@ -41,14 +41,17 @@ begin
   result := copy(S,7,4)+'-'+copy(S,4,2)+'-'+copy(S,1,2);
 end;
 
-procedure CriarForm(T : TComponentClass ;Form : TForm);
+procedure CriarForm(T : TComponentClass; Form : TForm);
 begin
-  Application.CreateForm(T,Form);
+  {Application.CreateForm(T,Form);
   try
-    Form.ShowModal;
+    Form.Show;
   finally
     FreeAndNil(Form);
-  end;
+  end;}
+  if Form = nil then
+    Form := T.Create(nil) as TForm;
+  Form.Show;
 end;
 
 function GetId(Campo, Tabela : String) : Integer;
