@@ -6,44 +6,64 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.jpeg,
   Vcl.ExtCtrls, Vcl.Imaging.pngimage, Vcl.ComCtrls, Vcl.Grids, Vcl.DBGrids,
-  Data.DB, sSkinManager, sEdit, sLabel, Vcl.Buttons;
+  Data.DB, sSkinManager, sEdit, sLabel, Vcl.Buttons, System.Actions,
+  Vcl.ActnList, Vcl.Menus, Vcl.ToolWin, System.ImageList, Vcl.ImgList;
 
 type
   TfrmPrincipal = class(TForm)
-    imgUsuarios: TImage;
-    Label1: TLabel;
-    imgReceber: TImage;
-    imgPagar: TImage;
-    imgCaixa: TImage;
-    imgConsReceber: TImage;
-    imgConsPagar: TImage;
-    Label2: TLabel;
-    Label3: TLabel;
-    imgConfiguração: TImage;
-    imgNavegador: TImage;
-    Image3: TImage;
-    Image4: TImage;
     StatusBar1: TStatusBar;
-    imgRelPagar: TImage;
-    imgRelReceber: TImage;
-    imgRelCaixa: TImage;
     BalloonHint: TBalloonHint;
     Timer: TTimer;
     sSkinManager1: TsSkinManager;
-    BitBtn1: TBitBtn;
-    Button1: TButton;
+    MainMenu1: TMainMenu;
+    ActionList1: TActionList;
+    actCadastroUsuario: TAction;
+    actContasReceber: TAction;
+    Arquivo1: TMenuItem;
+    Sair1: TMenuItem;
+    Funces1: TMenuItem;
+    CadastrodeUsurio1: TMenuItem;
+    CadastrodeContasaReceber1: TMenuItem;
+    ImageList1: TImageList;
+    actContasPagar: TAction;
+    actLancamentosCaixa: TAction;
+    actConsultaContasReceber: TAction;
+    actConsultaContasPagar: TAction;
+    ConsultarContasaPagar1: TMenuItem;
+    N1: TMenuItem;
+    LanamentosnoCaixa1: TMenuItem;
+    N2: TMenuItem;
+    ConsultarContasaReceber1: TMenuItem;
+    ConsultarContasaPagar2: TMenuItem;
+    actRelContasPagar: TAction;
+    actRelContasReceber: TAction;
+    actRelLancamentosCaixa: TAction;
+    actEmitirRecibo: TAction;
+    Relatrios1: TMenuItem;
+    RelatriodeContasaPagar1: TMenuItem;
+    RelatriodeContasaReceber1: TMenuItem;
+    N3: TMenuItem;
+    RelatriodeLanamentosnoCaixa1: TMenuItem;
+    Sistema1: TMenuItem;
+    N5: TMenuItem;
+    EmitirRecibo1: TMenuItem;
+    actSaldoCaixa: TAction;
+    SaldodoCaixa1: TMenuItem;
+    actConfiguracoes: TAction;
+    actSair: TAction;
     procedure TimerTimer(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure imgUsuariosClick(Sender: TObject);
-    procedure imgCaixaClick(Sender: TObject);
-    procedure imgPagarClick(Sender: TObject);
-    procedure imgReceberClick(Sender: TObject);
-    procedure imgConsReceberClick(Sender: TObject);
-    procedure imgConsPagarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure BitBtn1Click(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure actCadastroUsuarioExecute(Sender: TObject);
+    procedure actContasReceberExecute(Sender: TObject);
+    procedure actContasPagarExecute(Sender: TObject);
+    procedure actLancamentosCaixaExecute(Sender: TObject);
+    procedure actSaldoCaixaExecute(Sender: TObject);
+    procedure actEmitirReciboExecute(Sender: TObject);
+    procedure actConsultaContasReceberExecute(Sender: TObject);
+    procedure actConsultaContasPagarExecute(Sender: TObject);
+    procedure actSairExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -62,14 +82,65 @@ uses
   uFrmCadastroPagar, uFrmCadastroReceber, uFrmConsPagar, uFrmConsReceber,
   uFrmLogin, uFrmSplash, uFrmSaldoCaixa, uFrmEmitirRecibo, uSQL, uDmDados;
 
-procedure TfrmPrincipal.BitBtn1Click(Sender: TObject);
+procedure TfrmPrincipal.actCadastroUsuarioExecute(Sender: TObject);
 begin
-  CriarForm(TfrmSaldoCaixa, frmSaldoCaixa);
+  if frmCadastroUsuarios = nil then
+    frmCadastroUsuarios := TfrmCadastroUsuarios.Create(nil);
+  frmCadastroUsuarios.Show;
 end;
 
-procedure TfrmPrincipal.Button1Click(Sender: TObject);
+procedure TfrmPrincipal.actConsultaContasPagarExecute(Sender: TObject);
 begin
-  CriarForm(TfrmEmitirRecibo, frmEmitirRecibo);
+  if frmConsPagar = nil then
+    frmConsPagar := TfrmConsPagar.Create(nil);
+  frmConsPagar.Show;
+end;
+
+procedure TfrmPrincipal.actConsultaContasReceberExecute(Sender: TObject);
+begin
+  if frmConsReceber = nil then
+    frmConsReceber := TfrmConsReceber.Create(nil);
+  frmConsReceber.Show;
+end;
+
+procedure TfrmPrincipal.actContasPagarExecute(Sender: TObject);
+begin
+  if frmCadastroPagar = nil then
+    frmCadastroPagar := TfrmCadastroPagar.Create(nil);
+  frmCadastroPagar.Show;
+end;
+
+procedure TfrmPrincipal.actContasReceberExecute(Sender: TObject);
+begin
+  if frmCadastroReceber = nil then
+    frmCadastroReceber := TfrmCadastroReceber.Create(nil);
+  frmCadastroReceber.Show;
+end;
+
+procedure TfrmPrincipal.actEmitirReciboExecute(Sender: TObject);
+begin
+  if frmEmitirRecibo = nil then
+    frmEmitirRecibo := TfrmEmitirRecibo.Create(nil);
+  frmEmitirRecibo.Show;
+end;
+
+procedure TfrmPrincipal.actLancamentosCaixaExecute(Sender: TObject);
+begin
+  if frmCadastroCaixa = nil then
+    frmCadastroCaixa := TfrmCadastroCaixa.Create(nil);
+  frmCadastroCaixa.Show;
+end;
+
+procedure TfrmPrincipal.actSairExecute(Sender: TObject);
+begin
+  Self.Close;
+end;
+
+procedure TfrmPrincipal.actSaldoCaixaExecute(Sender: TObject);
+begin
+  if frmSaldoCaixa = nil then
+    frmSaldoCaixa := TfrmSaldoCaixa.Create(nil);
+  frmSaldoCaixa.Show;
 end;
 
 procedure TfrmPrincipal.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -111,36 +182,6 @@ begin
       );
      Items[4].Text := 'Base: ' + DmDados.ParametrosConexao.Database;
   end;
-end;
-
-procedure TfrmPrincipal.imgCaixaClick(Sender: TObject);
-begin
-  CriarForm(TfrmCadastroCaixa, frmCadastroCaixa);
-end;
-
-procedure TfrmPrincipal.imgConsPagarClick(Sender: TObject);
-begin
-  CriarForm(TfrmConsPagar,frmConsPagar);
-end;
-
-procedure TfrmPrincipal.imgConsReceberClick(Sender: TObject);
-begin
-  CriarForm(TfrmConsReceber,frmConsReceber);
-end;
-
-procedure TfrmPrincipal.imgPagarClick(Sender: TObject);
-begin
-  CriarForm(TfrmCadastroPagar, frmCadastroPagar);
-end;
-
-procedure TfrmPrincipal.imgReceberClick(Sender: TObject);
-begin
-  CriarForm(TfrmCadastroReceber,frmCadastroReceber);
-end;
-
-procedure TfrmPrincipal.imgUsuariosClick(Sender: TObject);
-begin
-  CriarForm(TfrmCadastroUsuarios, frmCadastroUsuarios);
 end;
 
 procedure TfrmPrincipal.TimerTimer(Sender: TObject);
