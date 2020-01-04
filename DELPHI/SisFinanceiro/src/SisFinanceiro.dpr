@@ -8,13 +8,11 @@ uses
   uUsuario in 'model\uUsuario.pas',
   uSistema in 'model\uSistema.pas',
   uFuncoes in 'model\uFuncoes.pas',
-  uCtrlLogin in 'controller\uCtrlLogin.pas',
   uSQL in 'model\uSQL.pas',
   uGetConexao in 'model\uGetConexao.pas',
   uDmDados in 'dao\uDmDados.pas' {DmDados: TDataModule},
   uFireDACConexao in 'model\uFireDACConexao.pas',
-  uLogin in 'model\uLogin.pas',
-  uLoginDAO in 'dao\uLoginDAO.pas';
+  uDmPrincipal in 'dao\uDmPrincipal.pas' {DmPrincipal: TDataModule};
 
 {$R *.res}
 
@@ -26,5 +24,6 @@ begin
   Application.MainFormOnTaskbar := True;
   Sistema := TSistema.Create;
   Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TDmPrincipal, DmPrincipal);
   Application.Run;
 end.

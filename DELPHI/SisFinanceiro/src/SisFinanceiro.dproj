@@ -118,7 +118,6 @@
         <DCCReference Include="model\uUsuario.pas"/>
         <DCCReference Include="model\uSistema.pas"/>
         <DCCReference Include="model\uFuncoes.pas"/>
-        <DCCReference Include="controller\uCtrlLogin.pas"/>
         <DCCReference Include="model\uSQL.pas"/>
         <DCCReference Include="model\uGetConexao.pas"/>
         <DCCReference Include="dao\uDmDados.pas">
@@ -127,8 +126,11 @@
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="model\uFireDACConexao.pas"/>
-        <DCCReference Include="model\uLogin.pas"/>
-        <DCCReference Include="dao\uLoginDAO.pas"/>
+        <DCCReference Include="dao\uDmPrincipal.pas">
+            <Form>DmPrincipal</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

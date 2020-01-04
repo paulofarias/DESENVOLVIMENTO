@@ -33,11 +33,23 @@ implementation
 {$R *.dfm}
 
 uses
-  uFuncoes, uSistema, Winapi.Windows, System.SysUtils, Winapi.Messages, uCtrlLogin;
+  uFuncoes, uSistema, Winapi.Windows, System.SysUtils, Winapi.Messages,
+  FireDAC.Comp.Client;
+
+const
+  CRLF = #13#10;
+  S_SQL_LOGIN =
+    'SELECT             ' + CRLF +
+    '  ID               ' + CRLF +
+    'FROM               ' + CRLF +
+    '  USUARIOS         ' + CRLF +
+    'WHERE              ' + CRLF +
+    '    LOGIN = :LOGIN ' + CRLF +
+    'AND SENHA = :SENHA ' ;
 
 procedure TfrmLogin.btnEntrarClick(Sender: TObject);
 var
-  CtrlLogin : TCtrlLogin;
+  qryAux: TFDQuery;
 begin
   if edtLogin.Text = '' then
   begin
@@ -53,25 +65,28 @@ begin
     Abort;
   end;
 
-  CtrlLogin := TCtrlLogin.Create;
-  try
-    if CtrlLogin.Logar(
-      Trim(edtLogin.Text),
-      Trim(edtSenha.Text)
-    ) then
-    begin
-      TSistema.SetUltimoAcesso(Trim(edtLogin.Text));
-      ModalResult := mrOk;
-    end
-    else
-    begin
-      Application.MessageBox('Usuário e/ou senha inválido.','Atenção',MB_OK+MB_ICONWARNING);
-      edtLogin.SetFocus;
-      Abort;
+  qryAux := TFDQuery.Create(nil);
+  with qryAux do
+    try
+      Connection := Sistema.Conexao;
+      SQL.Add(S_SQL_LOGIN);
+      Params[0].AsString := Trim(edtLogin.Text);
+      Params[1].AsString := Trim(edtSenha.Text);
+      Open;
+      if not isEmpty then
+      begin
+        TSistema.SetUltimoAcesso(Trim(edtLogin.Text));
+        ModalResult := mrOk;
+      end
+      else
+      begin
+        Application.MessageBox('Usuário e/ou senha inválido.','Atenção',MB_OK+MB_ICONWARNING);
+        edtLogin.SetFocus;
+        Abort;
+      end;
+    finally
+      Free;
     end;
-  finally
-    FreeAndNil(CtrlLogin);
-  end;
 end;
 
 procedure TfrmLogin.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -88,11 +103,12 @@ end;
 
 procedure TfrmLogin.FormShow(Sender: TObject);
 begin
-  //TUsuario.CarregarLogin(edtLogin);
+  {TUsuario.CarregarLogin(edtLogin);
   edtLogin.Text           := TSistema.GetUsuarioAcesso;
-  lblUltimoAcesso.Caption := TSistema.GetUltimoAcesso;
+  lblUltimoAcesso.Caption := TSistema.GetUltimoAcesso;}
 
   {$IFDEF DEBUG}
+    edtLogin.Text := 'sysdba';
     edtSenha.Text := 'masterkey';
     btnEntrar.SetFocus;
   {$ENDIF}
