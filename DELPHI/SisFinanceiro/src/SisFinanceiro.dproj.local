@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/11/06 23:32:11.000.136,=C:\Users\paulo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/01/03 17:10:13.750,=C:\Users\paulo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/01/03 17:10:54.219,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.dfm=C:\Users\paulo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/01/03 17:10:54.219,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas=C:\Users\paulo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/01/03 17:11:17.879,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\SisFinanceiro.dproj=C:\Users\paulo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2020/01/03 17:16:27.434,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\ufrmPrincipal.pas</Transaction>
+    <Transaction>2020/01/03 17:16:36.492,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas=</Transaction>
+    <Transaction>2020/01/03 17:26:15.004,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\ufrmPrincipal.pas=</Transaction>
+    <Transaction>2020/01/03 17:26:34.801,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\view\ufrmPrincipal.pas</Transaction>
+    <Transaction>2020/01/03 17:29:55.113,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\view\uFrmSplash.pas</Transaction>
+    <Transaction>2020/01/03 17:33:12.254,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\view\uFrmLogin.pas</Transaction>
+    <Transaction>2020/01/03 17:35:10.988,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uUsuario.pas</Transaction>
+    <Transaction>2020/01/03 17:36:41.847,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uSistema.pas</Transaction>
+    <Transaction>2020/01/03 17:41:03.425,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uFuncoes.pas</Transaction>
+    <Transaction>2020/01/03 18:12:36.425,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/03 18:12:56.457,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\controller\uCtrlLogin.pas=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/03 18:58:57.550,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uSQL.pas</Transaction>
+    <Transaction>2020/01/03 19:10:09.738,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uGetConexao.pas</Transaction>
+    <Transaction>2020/01/03 20:25:29.415,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\dao\uDmDados.pas</Transaction>
+    <Transaction>2020/01/04 15:57:04.832,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/04 15:57:22.608,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\uFireDACConexao.pas=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/04 15:57:38.398,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\uFireDACConexao.pas=</Transaction>
+    <Transaction>2020/01/04 15:58:12.592,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/04 15:58:26.309,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uFireDACConexao.pas=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/04 16:13:15.223,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/04 16:13:28.612,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uLogin.pas=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/04 16:18:31.888,=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+    <Transaction>2020/01/04 16:18:41.744,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\dao\uLoginDAO.pas=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
