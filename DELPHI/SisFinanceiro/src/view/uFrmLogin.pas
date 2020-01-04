@@ -75,7 +75,7 @@ begin
       Open;
       if not isEmpty then
       begin
-        TSistema.SetUltimoAcesso(Trim(edtLogin.Text));
+        Sistema.UsuarioLogado := Trim(edtLogin.Text);
         ModalResult := mrOk;
       end
       else
@@ -104,8 +104,8 @@ end;
 procedure TfrmLogin.FormShow(Sender: TObject);
 begin
   {TUsuario.CarregarLogin(edtLogin);
-  edtLogin.Text           := TSistema.GetUsuarioAcesso;
-  lblUltimoAcesso.Caption := TSistema.GetUltimoAcesso;}
+  edtLogin.Text           := TSistema.GetUsuarioAcesso;}
+  lblUltimoAcesso.Caption := Sistema.GetUltimoAcesso;
 
   {$IFDEF DEBUG}
     edtLogin.Text := 'sysdba';

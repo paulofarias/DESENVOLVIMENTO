@@ -8,7 +8,6 @@ object DmPrincipal: TDmPrincipal
       'Database=Financeiro'
       'Server=LOCALHOST'
       'User_Name=root')
-    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 8

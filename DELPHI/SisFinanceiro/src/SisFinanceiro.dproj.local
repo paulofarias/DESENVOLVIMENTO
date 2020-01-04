@@ -34,5 +34,8 @@
     <Transaction>2020/01/04 19:20:46.493,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\dao\uDmPrincipal.dfm=F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\Unit1.dfm</Transaction>
     <Transaction>2020/01/04 19:31:39.233,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\controller\uCtrlLogin.pas=</Transaction>
     <Transaction>2020/01/04 19:32:27.128,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uLogin.pas=</Transaction>
+    <Transaction>2020/01/04 19:34:38.240,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uGetConexao.pas=</Transaction>
+    <Transaction>2020/01/04 19:36:58.104,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uFireDACConexao.pas=</Transaction>
+    <Transaction>2020/01/04 19:44:20.110,F:\DESENVOLVIMENTO\trunk\DELPHI\SisFinanceiro\src\model\uUsuario.pas=</Transaction>
   </Transactions>
 </BorlandProject>

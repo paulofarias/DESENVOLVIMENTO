@@ -115,17 +115,14 @@
             <Form>frmLogin</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="model\uUsuario.pas"/>
         <DCCReference Include="model\uSistema.pas"/>
         <DCCReference Include="model\uFuncoes.pas"/>
         <DCCReference Include="model\uSQL.pas"/>
-        <DCCReference Include="model\uGetConexao.pas"/>
         <DCCReference Include="dao\uDmDados.pas">
             <Form>DmDados</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
-        <DCCReference Include="model\uFireDACConexao.pas"/>
         <DCCReference Include="dao\uDmPrincipal.pas">
             <Form>DmPrincipal</Form>
             <FormType>dfm</FormType>

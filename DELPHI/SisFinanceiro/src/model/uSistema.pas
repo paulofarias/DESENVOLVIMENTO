@@ -3,26 +3,20 @@ unit uSistema;
 interface
 
 uses
-  System.IniFiles, System.Classes,
-  FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
-  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
-  FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, FireDAC.Comp.Client,
-  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
-  FireDAC.Comp.DataSet;
+  System.IniFiles, System.Classes, FireDAC.Comp.Client;
 
 type
   TSistema = class
   private
-    class var fIniSistema : TIniFile;
-    fConexao: TFDConnection;
+    var fIniSistema : TIniFile;
+    fUsuarioLogado: String;
   public
-    constructor Create; reintroduce;
-    class procedure SetUltimoAcesso(Usuario: String);
-    class function GetUltimoAcesso : String;
-    class function GetUsuarioAcesso : String;
+    procedure SetUsuarioLogado(pUsuario: String);
+    function GetUltimoAcesso : String;
+    function GetUsuarioAcesso : String;
     function GetConexao: TFDConnection;
     property Conexao: TFDConnection read GetConexao;
+    property UsuarioLogado: String read fUsuarioLogado write SetUsuarioLogado;
   end;
 
   var
@@ -31,28 +25,14 @@ type
 implementation
 
 uses
-  Vcl.Forms, System.SysUtils;
+  Vcl.Forms, System.SysUtils, uDmPrincipal;
 
 const
   CRLF = #13#10;
 
 { TSistema }
 
-constructor TSistema.Create;
-begin
-  //inherited Create;
-  fConexao := TFDConnection.Create(Application);
-  fConexao.LoginPrompt := False;
-  fConexao.Params.Text :=
-    'DriverID=MySQL' + CRLF +
-    'Database=Financeiro' + CRLF +
-    'Server=localhost' + CRLF +
-    'User_Name=root' + CRLF +
-    'Password=';
-  fConexao.Connected := True;
-end;
-
-{class function TSistema.GetConexao_: TConexao;
+{function TSistema.GetConexao: TConexao;
 begin
   fIniSistema := TIniFile.Create(ExtractFilePath(Application.ExeName)+'config.ini');
   try
@@ -68,13 +48,10 @@ end;}
 
 function TSistema.GetConexao: TFDConnection;
 begin
-  if not fConexao.Connected then
-    fConexao.Connected := True;
-
-  Result := fConexao;
+  Result := dmPrincipal.FDConnection;
 end;
 
-class function TSistema.GetUltimoAcesso: String;
+function TSistema.GetUltimoAcesso: String;
 begin
   fIniSistema := TIniFile.Create(ExtractFilePath(Application.ExeName)+'config.ini');
   try
@@ -84,7 +61,7 @@ begin
   end;
 end;
 
-class function TSistema.GetUsuarioAcesso: String;
+function TSistema.GetUsuarioAcesso: String;
 begin
   fIniSistema := TIniFile.Create(ExtractFilePath(Application.ExeName) + 'config.ini');
   try
@@ -94,11 +71,12 @@ begin
   end;
 end;
 
-class procedure TSistema.SetUltimoAcesso(Usuario: String);
+procedure TSistema.SetUsuarioLogado(pUsuario: String);
 begin
+  fUsuarioLogado := pUsuario;
   fIniSistema := TIniFile.Create(ExtractFilePath(Application.ExeName)+'config.ini');
   try
-    fIniSistema.WriteString('ACESSO','USUARIO',Usuario);
+    fIniSistema.WriteString('ACESSO','USUARIO', pUsuario);
     fIniSistema.WriteString('ACESSO','DATA',DateTimeToStr(now));
   finally
     FreeAndNil(fIniSistema);

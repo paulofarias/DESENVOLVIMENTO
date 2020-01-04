@@ -870,9 +870,7 @@ object frmLogin: TfrmLogin
       B8DB2CB57DA6D28BF3D2445FB007D80000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
       0000000FFFD9}
-    ExplicitLeft = -24
-    ExplicitWidth = 860
-    ExplicitHeight = 443
+    ExplicitTop = -8
   end
   object Label1: TLabel
     Left = 102
