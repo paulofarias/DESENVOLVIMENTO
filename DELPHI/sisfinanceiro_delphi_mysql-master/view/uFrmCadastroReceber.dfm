@@ -3,7 +3,6 @@ inherited frmCadastroReceber: TfrmCadastroReceber
   PixelsPerInch = 96
   TextHeight = 13
   inherited PageControl1: TPageControl
-    ActivePage = tbsCadastro
     inherited tbsCadastro: TTabSheet
       object Label2: TLabel
         Left = 16
@@ -153,11 +152,7 @@ inherited frmCadastroReceber: TfrmCadastroReceber
       end
     end
     inherited tbsPesquisar: TTabSheet
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
-      object Label9: TLabel [2]
+      object Label9: TLabel [0]
         Left = 0
         Top = 48
         Width = 347
@@ -233,16 +228,6 @@ inherited frmCadastroReceber: TfrmCadastroReceber
             FieldName = 'dt_pagamento'
             Visible = True
           end>
-      end
-      inherited btnFiltrar: TBitBtn
-        OnClick = btnFiltrarClick
-      end
-      inherited cbxFiltros: TComboBox
-        ItemIndex = 0
-        Text = 'Descri'#231#227'o'
-        Items.Strings = (
-          'Descri'#231#227'o'
-          'Documento')
       end
     end
   end

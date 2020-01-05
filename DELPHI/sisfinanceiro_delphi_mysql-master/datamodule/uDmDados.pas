@@ -157,9 +157,11 @@ type
     fdqPagar_Detalhesusuario: TStringField;
     fdqRecibos: TFDQuery;
     fdqConsultas: TFDQuery;
+    cdsUsuariosCALC_Status: TStringField;
     procedure FDConnectionError(ASender, AInitiator: TObject;
       var AException: Exception);
     procedure DataModuleCreate(Sender: TObject);
+    procedure cdsUsuariosCalcFields(DataSet: TDataSet);
   private
     { Private declarations }
     function getParametrosConexao: TFDConnectionDefParams;
@@ -180,6 +182,14 @@ uses
 {$R *.dfm}
 
 { TDmDados }
+
+procedure TDmDados.cdsUsuariosCalcFields(DataSet: TDataSet);
+begin
+  if cdsUsuariosstatus.AsString = 'A' then
+    cdsUsuariosCALC_Status.AsString := 'Ativo'
+  else if cdsUsuariosstatus.AsString = 'A' then
+    cdsUsuariosCALC_Status.AsString := 'Inativo'
+end;
 
 procedure TDmDados.DataModuleCreate(Sender: TObject);
 begin

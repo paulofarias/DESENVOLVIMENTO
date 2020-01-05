@@ -6,7 +6,7 @@ uses
   Vcl.Forms, System.SysUtils, System.Classes, uDmDados, Data.DB, Data.SqlExpr,
   Vcl.DBGrids, Vcl.Grids, System.Types, System.Generics.Collections;
 
-  procedure CriarForm(T : TComponentClass ;Form : TForm);
+  //procedure CriarForm(T: TComponentClass; var Form: TForm);
   function  GetId(Campo, Tabela : String) : Integer;
   function  GetLoginCadastrado(Login : String) : Boolean;
   procedure ZebrarDBGrid(DataSource : TDataSource; Sender : TDBGrid; State : TGridDrawState; Rect : TRect; Column : TColumn);
@@ -41,7 +41,7 @@ begin
   result := copy(S,7,4)+'-'+copy(S,4,2)+'-'+copy(S,1,2);
 end;
 
-procedure CriarForm(T : TComponentClass; Form : TForm);
+procedure CriarForm(T : TComponentClass; var Form : TForm);
 begin
   {Application.CreateForm(T,Form);
   try

@@ -260,6 +260,7 @@ object DmDados: TDmDados
     Aggregates = <>
     Params = <>
     ProviderName = 'dspUsuarios'
+    OnCalcFields = cdsUsuariosCalcFields
     Left = 568
     Top = 168
     object cdsUsuariosid: TIntegerField
@@ -300,6 +301,11 @@ object DmDados: TDmDados
       FieldName = 'dt_cadastro'
       Origin = 'dt_cadastro'
       Required = True
+    end
+    object cdsUsuariosCALC_Status: TStringField
+      FieldKind = fkCalculated
+      FieldName = 'CALC_Status'
+      Calculated = True
     end
   end
   object dspUsuarios: TDataSetProvider
@@ -550,6 +556,7 @@ object DmDados: TDmDados
       'Database=Financeiro'
       'Server=LOCALHOST'
       'User_Name=root')
+    Connected = True
     LoginPrompt = False
     OnError = FDConnectionError
     Left = 128
