@@ -33,54 +33,67 @@ implementation
 {$R *.dfm}
 
 uses
-  uFuncoes, uSistema, Winapi.Windows, System.SysUtils, Winapi.Messages,
-  FireDAC.Comp.Client;
+  uFuncoes,
+  uSistema,
+  Winapi.Windows,
+  System.SysUtils,
+  Winapi.Messages,
+  ZDataset
+  ;
 
 const
   CRLF = #13#10;
+
   S_SQL_LOGIN =
-    'SELECT             ' + CRLF +
-    '  ID               ' + CRLF +
-    'FROM               ' + CRLF +
-    '  USUARIOS         ' + CRLF +
-    'WHERE              ' + CRLF +
-    '    LOGIN = :LOGIN ' + CRLF +
-    'AND SENHA = :SENHA ' ;
+    'SELECT                 ' + CRLF +
+    '  USU.Cod_Usuario,     ' + CRLF +
+    '  USU.flg_Ativo        ' + CRLF +
+    'FROM                   ' + CRLF +
+    '  USUARIO USU          ' + CRLF +
+    'WHERE                  ' + CRLF +
+    '    Des_Login = :Login ' + CRLF +
+    'AND Des_Senha = :Senha ' + CRLF ;
 
 procedure TfrmLogin.btnEntrarClick(Sender: TObject);
 var
-  qryAux: TFDQuery;
+  qryAux: TZQuery;
 begin
   if edtLogin.Text = '' then
   begin
-    Application.MessageBox('Informe seu usuário.','Atenção',MB_OK+MB_ICONWARNING);
+    Application.MessageBox('Informe seu usuário.', 'Atenção',MB_OK + MB_ICONWARNING);
     edtLogin.SetFocus;
     Abort;
   end
   else
   if edtSenha.Text = '' then
   begin
-    Application.MessageBox('Informe sua senha.','Atenção',MB_OK+MB_ICONWARNING);
+    Application.MessageBox('Informe sua senha.', 'Atenção',MB_OK+MB_ICONWARNING);
     edtSenha.SetFocus;
     Abort;
   end;
 
-  qryAux := TFDQuery.Create(nil);
+  qryAux := TZQuery.Create(nil);
   with qryAux do
     try
       Connection := Sistema.Conexao;
       SQL.Add(S_SQL_LOGIN);
-      Params[0].AsString := Trim(edtLogin.Text);
-      Params[1].AsString := Trim(edtSenha.Text);
+      ParamByName('Login').AsString := Trim(edtLogin.Text);
+      ParamByName('Senha').AsString := Trim(edtSenha.Text);
       Open;
       if not isEmpty then
       begin
+        if qryAux.FieldByName('Flg_Ativo').AsString <> 'A' then
+        begin
+          Application.MessageBox('Usuário não está ativo.', 'Atenção',MB_OK + MB_ICONWARNING);
+          edtLogin.SetFocus;
+          Abort;
+        end;
         Sistema.UsuarioLogado := Trim(edtLogin.Text);
         ModalResult := mrOk;
       end
       else
       begin
-        Application.MessageBox('Usuário e/ou senha inválido.','Atenção',MB_OK+MB_ICONWARNING);
+        Application.MessageBox('Usuário e/ou senha inválido.', 'Atenção',MB_OK + MB_ICONWARNING);
         edtLogin.SetFocus;
         Abort;
       end;
@@ -103,13 +116,11 @@ end;
 
 procedure TfrmLogin.FormShow(Sender: TObject);
 begin
-  {TUsuario.CarregarLogin(edtLogin);
-  edtLogin.Text           := TSistema.GetUsuarioAcesso;}
   lblUltimoAcesso.Caption := Sistema.GetUltimoAcesso;
 
   {$IFDEF DEBUG}
-    edtLogin.Text := 'sysdba';
-    edtSenha.Text := 'masterkey';
+    edtLogin.Text := 'paulo';
+    edtSenha.Text := 'gf8200a';
     btnEntrar.SetFocus;
   {$ENDIF}
 end;
