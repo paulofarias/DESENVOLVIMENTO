@@ -3,19 +3,17 @@ unit uDmPrincipal;
 interface
 
 uses
-  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
-  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
-  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
-  FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client;
+  System.Classes, ZConnection, Data.DB, ZAbstractConnection;
 
 type
   TDmPrincipal = class(TDataModule)
-    FDConnection: TFDConnection;
+    ZConnection: TZConnection;
   private
     { Private declarations }
   public
     { Public declarations }
   end;
+
 
 var
   DmPrincipal: TDmPrincipal;
@@ -27,3 +25,5 @@ implementation
 {$R *.dfm}
 
 end.
+
+//Provider=SQLNCLI11.1;Persist Security Info=True;User ID=sa;Password=masterkey;Initial Catalog=SISFINANCEIRO;Data Source=(LocalDB)\MSSQLLocalDB;Initial File Name="";Server SPN=""
